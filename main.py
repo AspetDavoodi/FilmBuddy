@@ -34,7 +34,15 @@ def main ():
         15-Revolog
         """)
 
-        BrandChoice = int (input ("Please select the number of the corresponding brand that you'd like to add a roll to\n"))
+        brandChoice = int (input ("Please select the number of the corresponding brand that you'd like to add a roll to\n"))
+
+        modelName = input ("What is the name of the roll you'd like to add")
+        ISORange = int(input ("How many ISO's is the roll available in? (input an integer number)"))
+        ISOValues = ()
+        for i in range(ISORange):
+            n = input("Please write the ISO values of the roll, in increasing order")
+            ISOValues.append(int(n))
+        
 
     getRollData()
 
