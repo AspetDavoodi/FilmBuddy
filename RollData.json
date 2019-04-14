@@ -1,9 +1,11 @@
 {
   "Kodak": [
 
-    {"model": "Portra",
+      {"model": "Portra",
       "ISO": [160, 400,800],
       "type": "Negative",
+      "Usage": ["Portraits","General","Street"],
+      "is_HighEnd": true,
       "is_Color": true,
       "is_inProduction": true
       },
@@ -11,6 +13,8 @@
       {"model": "Gold",
       "ISO": [200],
       "type": "Negative",
+      "Usage": ["Portraits","General"],
+      "is_HighEnd": false,
       "is_Color": true,
       "is_inProduction": true
       },
@@ -18,6 +22,8 @@
       {"model": "Ultramax",
       "ISO": [400],
       "type": "Negative",
+      "Usage": ["Portraits","General"],
+      "is_HighEnd": false,
       "is_Color": true,
       "is_inProduction": true
       },
@@ -25,6 +31,8 @@
       {"model": "Ektar",
       "ISO": [100],
       "type": "Negative",
+      "Usage": ["Portraits","General"],
+      "is_HighEnd": true,
       "is_Color": true,
       "is_inProduction": true
       },
@@ -32,16 +40,21 @@
       {"model": "Ektachrome",
       "ISO": [100],
       "type": "Slide",
+      "Usage": ["Portraits","General"],
+      "is_HighEnd": true,
       "is_Color": true,
       "is_inProduction": true
       }
 
     ],
+
   "FujiColor":[
 
     {"model": "Superia",
       "ISO": [400,800],
       "type": "Negative",
+      "Usage": ["Portraits","General"],
+      "is_HighEnd": false,
       "is_Color": true,
       "is_inProduction": true
       }
