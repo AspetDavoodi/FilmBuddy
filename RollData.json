@@ -1,0 +1,51 @@
+{
+  "Kodak": [
+
+    {"model": "Portra",
+      "ISO": [160, 400,800],
+      "type": "Negative",
+      "is_Color": true,
+      "is_inProduction": true
+      },
+
+      {"model": "Gold",
+      "ISO": [200],
+      "type": "Negative",
+      "is_Color": true,
+      "is_inProduction": true
+      },
+
+      {"model": "Ultramax",
+      "ISO": [400],
+      "type": "Negative",
+      "is_Color": true,
+      "is_inProduction": true
+      },
+
+      {"model": "Ektar",
+      "ISO": [100],
+      "type": "Negative",
+      "is_Color": true,
+      "is_inProduction": true
+      },
+
+      {"model": "Ektachrome",
+      "ISO": [100],
+      "type": "Slide",
+      "is_Color": true,
+      "is_inProduction": true
+      }
+
+    ],
+  "FujiColor":[
+
+    {"model": "Superia",
+      "ISO": [400,800],
+      "type": "Negative",
+      "is_Color": true,
+      "is_inProduction": true
+      }
+
+    ]
+
+}
