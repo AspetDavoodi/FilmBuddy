@@ -21,29 +21,27 @@ Please choose operation mode\n
 
 input:  """))
 
-            while True:
-                if modeChoice == 1:
-                    while True:
+            if modeChoice == 1:
+                while True:
+                    modeContinue = int(input("Would you like to add another roll? If yes, input 1 otherwise input 0 to exit"))
+                    if modeContinue == 1:
                         adminMode()
-                        modeContinue = int(input("Would you like to add another roll? If yes, input 1 otherwise input 0 to exit"))
-                        if modeContinue == 1:
-                            adminMode()
-                        elif modeContinue == 0:
-                            print("successfully ended admin mode. Bye Bye!")
-                            break
-                        else:
-                            print("Invalid input, please refer to the instructions above.")
+                    elif modeContinue == 0:
+                        print("successfully ended admin mode. Bye Bye!")
+                        break
+                    else:
+                        print("Invalid input, please refer to the instructions above.")
 
-                elif modeChoice == 2:
-                    userMode()
-                    break
-                else:
-                    print("invalid choice, please follow the instructions for choosing mode of operation")
+            elif modeChoice == 2:
+                userMode()
+            else:
+                print("invalid choice, please follow the instructions for choosing mode of operation")
 
     def userMode ():
         pass
 
     def adminMode ():
+        pass
 
         def ISOWrite():
             ISORange = int(input("How many ISO's is the roll available in? (input an integer number)"))
