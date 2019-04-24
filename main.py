@@ -23,8 +23,17 @@ input:  """))
 
             while True:
                 if modeChoice == 1:
-                    adminMode()
-                    break
+                    while True:
+                        adminMode()
+                        modeContinue = int(input("Would you like to add another roll? If yes, input 1 otherwise input 0 to exit"))
+                        if modeContinue == 1:
+                            adminMode()
+                        elif modeContinue == 0:
+                            print("successfully ended admin mode. Bye Bye!")
+                            break
+                        else:
+                            print("Invalid input, please refer to the instructions above.")
+
                 elif modeChoice == 2:
                     userMode()
                     break
@@ -160,11 +169,12 @@ Below are the list of Brands that already exist in the database. \n""")
             "is_inProduction": production
         }
 
-        print (newRoll, sep="\n")
+        RollData[brandChoice].append(newRoll)
 
-        with open ("NewData.json", "w") as file:
-            json.dump(newRoll,file, indent=0, separators=(',', ': '))
+        print ("Roll added succefully!!\n Thank you for your contribution.")
 
+        with open('RollData.json', 'w') as writeData:
+            json.dump(RollData, writeData, indent=4, separators=(',', ': '))
 
     getRollData()
 
