@@ -41,7 +41,6 @@ input:  """))
         pass
 
     def adminMode ():
-        pass
 
         def ISOWrite():
             ISORange = int(input("How many ISO's is the roll available in? (input an integer number)"))
