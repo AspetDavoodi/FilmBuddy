@@ -42,6 +42,20 @@ input:  """))
 
     def adminMode ():
 
+        def brandChoice():
+
+            while True:
+                tempBrandChoice = (input("\nPlease input the name of the Brand you would like to add a roll to.\n"))
+
+                brandValidation = RollData.get(tempBrandChoice)
+
+                if brandValidation is None:
+                    print("Invalid input, please input the name of the brand you want to select")
+                else:
+                    break
+            return tempBrandChoice
+
+
         def ISOWrite():
             ISORange = int(input("How many ISO's is the roll available in? (input an integer number)"))
             ISOValues = []
@@ -101,7 +115,7 @@ input:  """)
                     print ("Invalid input, please refer to the instructions above")
             return is_HighEnd
 
-        def prodcutionWrite():
+        def productionWrite():
             productionMode = int (input("Is this roll currently in production? Input 1 for yes, 0 for no"))
 
             while True:
@@ -136,7 +150,7 @@ Below are the list of Brands that already exist in the database. \n""")
 
         print (("   \n").join(RollData.keys()))
 
-        brandChoice = (input ("\nPlease input the name of the Brand you would like to add a roll to.\n"))
+        brandChoice = brandChoice()
 
         print ("Here are the models that already exist for the selected brand:\n",)
         modelsInBrand(brandChoice)
@@ -154,7 +168,7 @@ Below are the list of Brands that already exist in the database. \n""")
 
 
 
-        production = prodcutionWrite()
+        production = productionWrite()
 
         newRoll = {
             "model": modelName,
