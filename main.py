@@ -229,7 +229,13 @@ after 18 pm - write night
 
     FoundRolls = findRolls(RollData, ISO, is_Highend, is_Color, Type)
 
-    print(FoundRolls)
+    print("Here are some rolls you can get for your next shoot!\n")
+
+    for i in FoundRolls:
+        print (i)
+
+    print("\nHave fun!!!!")
+
 
 def adminMode (RollData):
 
