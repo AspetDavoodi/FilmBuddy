@@ -28,9 +28,11 @@ How is this program created? - The program is built using python, the film datab
 User Problems Solved!
 
 User Need: Administators need to be able to add new film rolls to the database.
+
 Solution: FilmBuddy has a dedicated Admin mode for administrators to be able to update the datablase.
 
 User Need: Users need to be able to provide information about their preferences to which the rolls has to correspond (i.e: budget, shooting preferences)
+
 Solution: Before suggesting anything, FilmBuddy's user mode takes the preferences of the user to fine tune the suggestions.
 
 
