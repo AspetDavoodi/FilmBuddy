@@ -140,7 +140,7 @@ after 18 pm - write night
             ISOmin = 800
             ISOmax = 6400
 
-        ISO = range(ISOmin, ISOmax)
+        ISO = range(ISOmin, ISOmax+1)
         return ISO
 
 
@@ -159,39 +159,23 @@ after 18 pm - write night
         return is_Color
 
 
-    def getProcess():
-
-        processes = []
+    def getType():
 
         while True:
-            C41userInput = input("Do you have access to C-41 (Color Negative) development?")
+            userInput = input("Do you want negative film?")
+            userInput = int(checkAgreement(userInput))
 
-            C41userInput = int(checkAgreement(C41userInput))
-
-            if C41userInput == 1:
-                processes.append("Negative")
+            if userInput == 1:
+                type = ["Negative"]
                 break
-            elif C41userInput == 0:
-                pass
+            elif userInput == 0:
+                type = ["Slide"]
                 break
-            else: print("Invalid input, Try again")
-
-        while True:
-            E6userInput = input("Do you have access to E-6 (Color Reversal- Slide) development?")
-            E6userInput = int(checkAgreement(E6userInput))
-
-            if E6userInput == 1:
-                processes.append("Slide")
-                break
-            elif E6userInput == 0:
-                pass
-                break
-            else: print("Invalid input, Try again")
-
-        return processes
+            else: print("Invalid input, please try again")
+        return type
 
 
-    def findRolls(RollData, ISO, Budget, Color, Process=["N/A"]):
+    def findRolls(RollData, ISO, Budget, Color, Type):
 
         brands = []
         ISOfilter = []
@@ -221,7 +205,7 @@ after 18 pm - write night
 
         for i in brands:
             for c in RollData[i]:
-                if c["type"] in Process:
+                if c["type"] in Type:
                     processFilter.append(c["model"])
 
 
@@ -241,10 +225,9 @@ after 18 pm - write night
     is_Color = getColor()
     timeofday = getTimeofDay()
     ISO = timeofDaytoISO(timeofday)
-    Process = getProcess()
+    Type = getType()
 
-
-    FoundRolls = findRolls(RollData, ISO, is_Highend, is_Color, Process)
+    FoundRolls = findRolls(RollData, ISO, is_Highend, is_Color, Type)
 
     print(FoundRolls)
 
